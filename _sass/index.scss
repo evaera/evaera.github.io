@@ -1,0 +1,60 @@
+.full-screen {
+    section.welcome {
+        height: 100vh;
+        color: white;
+        background: #d230db;
+        background: -moz-radial-gradient(center, ellipse cover, #d230db 0%, #a01df2 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #d230db 0%, #a01df2 100%);
+        background: radial-gradient(ellipse at center, #d230db 0%, #a01df2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d230db', endColorstr='#a01df2',GradientType=1 );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .contact {
+            margin-top: 10vh;
+
+            a img {
+                opacity: 0.9;
+                filter: brightness(0) invert(1);
+                height: 64px;
+                margin: 30px;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .down {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 25px;
+            opacity: 0.4;
+
+            img {
+                position: absolute;
+                height: 32px;
+                margin-left: 5px;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.center-wrapper {
+    margin-top: 0;
+    padding-top: 20vh;
+}
+
+.center-wrapper .center {
+    h1 {
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding-top: 10vh;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}

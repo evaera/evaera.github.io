@@ -1,0 +1,23 @@
+body {
+    font-family: Roboto;
+    height: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+section:not(.full-width) {
+    max-width: 1000px;
+    margin: 50px auto;
+}
