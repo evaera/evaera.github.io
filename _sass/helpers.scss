@@ -2,3 +2,37 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.flip-over {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 30px;
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+
+    img, span {
+        backface-visibility: hidden;
+        border-radius: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+    }
+
+    span {
+        background: white;
+        transform: rotateY(180deg);
+        line-height: 64px;
+        font-size: 14px;
+        border: 6px solid white;
+    }
+}
