@@ -24,10 +24,10 @@ title: eryn L. K.
 	{% for project in site.data.portfolio %}
 	<div class="project">
 		<div class="divider darker"></div>
+		<img src="{{ project.image }}" alt="{{ project.title }}">
 		{% if project.headline %}
 		<h3>{{ project.headline.title }} <small>{{ project.headline.subtitle }}</small></h3>
 		{% endif %}
-		<img src="{{ project.image }}" alt="{{ project.title }}">
 		<h2>{{ project.title }} <small>{{ project.languages | join: ", " }}</small></h2>
 		<h4>
 		{% for link in project.links %}

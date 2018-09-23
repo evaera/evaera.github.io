@@ -45,6 +45,10 @@
 .center-wrapper {
     margin-top: 0;
     padding-top: 20vh;
+
+    @media screen and (max-width: $break) {
+        padding-top: 0;
+    }
 }
 
 .center-wrapper .center {
@@ -76,6 +80,27 @@
     img {
         float: right; 
         width: 128px; 
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: $break) {
+        h2, h3, h4 {
+            text-align: center;
+        }
+
+        h2 small {
+            display: block;
+            margin: 15px 0;
+        }
+        
+        img {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
     }
 }
 
