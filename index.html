@@ -21,40 +21,21 @@ title: eryn L. K.
 	</div>
 </section>
 <section class="content">
+	{% for project in site.data.portfolio %}
 	<div class="project">
-		<img src="https://www.screen-scraper.com/images/logo.svg" alt="screen-scraper" style="margin-top: -20px;" />
-		<h3>Current Position <small>since 2016</small></h3>
-		<h2>Software Engineer at screen-scraper</a></h2>
-		<h4><a target="_blank" href="https://www.screen-scraper.com">www.screen-scraper.com</a></h4>
-		<p>Website designer, developer, and web scraping in Java</p>
-	</div>
-	<div class="project border-top">
 		<div class="divider darker"></div>
-		<img src="https://scriptinghelpers.org/images/logos/logo_sm.png" alt="Scripting Helpers">
-		<h2>Scripting Helpers <small>PHP</small></h2>
-		<h4><a target="_blank" href="https://scriptinghelpers.org">www.scriptinghelpers.org</a></h4>
-		<p>Roblox scripting Q&amp;A community with over 17,000 members.</p>
+		{% if project.headline %}
+		<h3>{{ project.headline.title }} <small>{{ project.headline.subtitle }}</small></h3>
+		{% endif %}
+		<img src="{{ project.image }}" alt="{{ project.title }}">
+		<h2>{{ project.title }} <small>{{ project.languages | join: ", " }}</small></h2>
+		<h4>
+		{% for link in project.links %}
+			<a target="_blank" href="{% if link.href %}{{ link.href }}{% else %}http://{{ link.text}}{% endif %}">{{ link.text }}</a>{% unless forloop.last %}, {% endunless %}
+		{% endfor %}
+		</h4>
+		<p>{{ project.description | markdownify }}</p>
 	</div>
-	<div class="project border-top">
-		<div class="divider"></div>
-		<img src="https://i.imgur.com/FKOOcTK.png" alt="RoVer">
-		<h2>RoVer <small>NodeJS</small></h2>
-		<h4><a target="_blank" href="https://github.com/evaera/RoVer">GitHub</a>, <a target="_blank" href="https://eryn.io/RoVer/">Project page</a></h4>
-		<p>RoVer is an open source, drop-in verification bot that will allow your members to safely authenticate their Roblox account on your Discord server.</p>
-	</div>
-	<div class="project border-top">
-		<div class="divider"></div>
-		<img src="/images/icons/roblox.png" alt="ROBLOX" style="width: 100px;">
-		<h2>Roblox games <small>Lua</small></h2>
-		<h4><a target="_blank" href="https://www.roblox.com/games/1383356634/The-Third-Crusade-Alpha">The Third Crusade</a>, <a target="_blank" href="https://www.roblox.com/games/418888822/its-high-noon">McCree's Ultimate</a>, <a target="_blank" href="https://www.roblox.com/games/1011040357/Sword-Shield-tech-demo">Sword&amp;Shield Combat</a>, <a target="_blank" href="https://www.roblox.com/games/752976300/Shuttle">Mass Effect Shuttle</a></h4>
-		<p>I've been programming in Lua on Roblox since 2009, and use it as my hobby game development platform.</p>
-	</div>
-	<div class="project border-top">
-		<div class="divider"></div>
-		<img src="https://i.imgur.com/o762k2J.png" alt="Node">
-		<h2>RbxSync <small>NodeJS</small></h2>
-		<h4><a target="_blank" href="https://github.com/evaera/RbxSync">GitHub</a></h4>
-		<p>RbxSync was an open source Roblox plugin that easily integrated any third-party code editor or IDE, such as Sublime Text, Notepad++, VS Code, or Atom, into ROBLOX Studio. I have since dropped support for it in favor of Rojo and a <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo">VS Code extension</a> I made for it.</p>
-	</div>
+	{% endfor %}
 </section>
 <div class="rainbow"></div>

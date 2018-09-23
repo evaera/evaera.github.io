@@ -60,6 +60,11 @@
 }
 
 .project {
+    &:first-of-type {
+        .divider {
+            display: none;
+        }
+    }
     h2 {
         margin: 0;
     }
