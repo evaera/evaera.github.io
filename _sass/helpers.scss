@@ -16,9 +16,12 @@
         transform: rotateY(180deg);
     }
 
+    span {
+        border-radius: 100%;
+    }
+
     img, span {
         backface-visibility: hidden;
-        border-radius: 100%;
         overflow: hidden;
         position: absolute;
         left: 0;
@@ -26,6 +29,8 @@
         width: 100%;
         height: 100%;
         margin: 0 !important;
+        color: #d230db;
+        // word-wrap: break-word;
     }
 
     span {
