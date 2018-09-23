@@ -123,12 +123,12 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/RbxSync
-  image: https://i.imgur.com/o762k2J.png
+  image: https://i.eryn.io/6cyqn6xqtu.png
   description: RbxSync was an open source Roblox plugin that easily integrated any third-party code editor or IDE, such as Sublime Text, Notepad++, VS Code, or Atom, into ROBLOX Studio. I have since dropped support for it in favor of Rojo and a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo) I made for it.
 - 
   title: Poll Dancer
   languages:
-    - 2018
+    - 2017
     - TypeScript
   links:
     - text: Project Page
