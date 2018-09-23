@@ -57,4 +57,12 @@ section:not(.full-width) {
     max-width: 900px;
     padding: 0 100px;
     margin: 100px auto;
+
+    @media screen and (max-width: $break) {
+        padding: 0 25px;
+
+        p {
+            text-align: justify;
+        }
+    }
 }
