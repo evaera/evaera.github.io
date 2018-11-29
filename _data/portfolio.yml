@@ -37,6 +37,17 @@
   image: https://rover.link/images/icon.png
   description: RoVer is an open source, drop-in verification Discord bot that will allow your members to safely authenticate their Roblox account on your Discord server. RoVer currently has over 650,000 verified users, and totals in at over 65,000 Discord servers.
 -
+  title: Aquaman: Home is Calling
+  languages:
+    - 2018
+    - Roblox
+    - Lua
+  links:
+    - text: Roblox Game
+      href: https://www.roblox.com/games/2056459358/Aquaman-Home-is-Calling
+  image: https://i.eryn.io/fq069ykjq1.png
+  description: *Aquaman: Home is Calling* is a multiplayer MMORPG-esque underwater experience wherein the player becomes Aquaman to overcome trials to become the King of Atlantis. This game was sponsored by Warner Brothers and produced by Roblox in order to promote the then-upcoming Aquaman film. Working as part of a team for several months, we implemented custom solutions to problems like underwater pathfinding with navigation mesh generation, enemy AI, a polymorphic Unit system to model any combatant (be it a player or an AI-controlled NPC), and a state management system named Aurora.
+-
   title: Scripting Helpers
   languages:
     - 2013
