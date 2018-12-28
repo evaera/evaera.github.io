@@ -70,7 +70,7 @@
 
     .card-header {
       position: absolute;
-      float: right;
+      right: 0;
       opacity: 0;
       transition: 0.5s opacity ease;
     }
@@ -92,7 +92,7 @@
 <body>
   <main class="container" v-cloak v-if="gist" v-newtab>
     <h1 class="center gist-title" id="gist_description">
-      {{ gist.description }}
+      {{ gist.description || Object.keys(gist.files)[0] }}
       <a :href="gist.html_url">🔗</a>
     </h1>
 
