@@ -85,6 +85,7 @@
 
     pre {
       overflow: auto;
+      tab-size: 4;
     }
   </style>
 </head>
@@ -102,9 +103,7 @@
       <div class="card-header"><a :href="file.raw_url">{{ fileName }}</a></div>
       <div class="content" v-if="file.language == 'Markdown'" v-html="marked(file.content)"></div>
       <pre v-else>
-      <code>
-        {{ file.content }}
-      </code>
+      <code>{{ file.content }}</code>
     </pre>
     </div>
   </main>
