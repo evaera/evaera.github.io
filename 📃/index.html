@@ -55,12 +55,12 @@
     }
 
     .gist-title {
-      margin-bottom: 70px;
       position: relative;
+      /* margin-bottom: 5px; */
     }
 
     .gist-title a {
-      opacity: 0;
+      opacity: 0.2;
       transition: 0.5s opacity ease;
       position: absolute;
       font-size: 16px;
@@ -70,7 +70,7 @@
       text-decoration: none;
     }
 
-    .gist-title:hover a {
+    .gist-title a:hover {
       opacity: 1;
     }
 
@@ -97,15 +97,36 @@
     .card .content {
       padding-top: 20px;
     }
+
+    .gist-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .gist-header h4 {
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    .gist-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
   </style>
 </head>
 
 <body>
   <main class="container" v-cloak v-if="gist" v-newtab>
-    <h1 class="center gist-title" id="gist_description">
-      {{ gist.description || Object.keys(gist.files)[0] }}
-      <a :href="gist.html_url">🔗</a>
-    </h1>
+    <div class="gist-header">
+      <h1 class="center gist-title" id="gist_description">
+        {{ gist.description || Object.keys(gist.files)[0] }}
+        <a :href="gist.html_url">🔗</a>
+      </h1>
+      <h4><a :href="gist.owner.html_url"><img :src="gist.owner.avatar_url" :alt="gist.owner.login">{{ gist.owner.login }}</a></h4>
+    </div>
 
     <div id="card_container"></div>
 
