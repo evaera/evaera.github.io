@@ -69,6 +69,7 @@
     }
 
     .card-header {
+      position: absolute;
       float: right;
       opacity: 0;
       transition: 0.5s opacity ease;
@@ -177,6 +178,8 @@
           }
 
           this.gist = await request.json()
+
+          document.title = this.gist.description
         },
         marked
       }
