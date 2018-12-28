@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.png" type="image/png" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" crossorigin="anonymous">
@@ -47,6 +47,12 @@
       margin-top: 70px;
       width: 700px;
     }
+    
+    @media screen and (max-width: 600px) {
+      main.container {
+        width: 90%;
+      }
+    }
 
     .gist-title {
       margin-bottom: 70px;
@@ -86,6 +92,10 @@
     pre {
       overflow: auto;
       tab-size: 4;
+    }
+    
+    .card .content {
+      padding-top: 20px;
     }
   </style>
 </head>
