@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Oxygen:400,700" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@0.5.0/lib/marked.min.js" integrity="sha384-6PpbRq/U7L2xLZmesNvlDHXvG6ggNJWmJ8GDWZmPe8vttqFAAe6JcDsINnD6xO0Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/typescript.min.js" integrity="sha256-LWmmFG1DeNLUUp0G4vr7vjaHOEFAvzYZ9exFbHFvg8w="
+    crossorigin="anonymous"></script>
+
+  <title>Eryn's Gist Viewer</title>
+
+  <style>
+    ol,
+    li {
+      list-style-position: outside;
+    }
+
+    body {
+      font-size: 20px;
+      font-family: Oxygen;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Poppins, sans-serif;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    main.container {
+      margin-top: 70px;
+      width: 700px;
+    }
+
+    .gist-title {
+      margin-bottom: 70px;
+      position: relative;
+    }
+
+    .gist-title a {
+      opacity: 0;
+      transition: 0.5s opacity ease;
+      position: absolute;
+      font-size: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .gist-title:hover a {
+      opacity: 1;
+    }
+
+    .card-header {
+      float: right;
+      opacity: 0;
+      transition: 0.5s opacity ease;
+    }
+
+    .card:hover .card-header {
+      opacity: 0.7;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+
+    pre {
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container" v-cloak v-if="gist" v-newtab>
+    <h1 class="center gist-title" id="gist_description">
+      {{ gist.description }}
+      <a :href="gist.html_url">🔗</a>
+    </h1>
+
+    <div id="card_container"></div>
+
+    <div class="card" v-for="(file, fileName) in gist.files" v-highlightjs>
+      <div class="card-header"><a :href="file.raw_url">{{ fileName }}</a></div>
+      <div class="content" v-if="file.language == 'Markdown'" v-html="marked(file.content)"></div>
+      <pre v-else>
+      <code>
+        {{ file.content }}
+      </code>
+    </pre>
+    </div>
+  </main>
+  <script>
+    function fetchGist(id) {
+      const url = `https://api.github.com/gists/${id}`
+      return fetch(url)
+        .catch(console.error);
+    }
+
+    function getCurrentGistID() {
+      return window.location.hash.substr(1);
+    }
+
+    marked.setOptions({
+      langPrefix: '',
+      sanitize: true,
+      smartypants: true,
+      tables: true
+    })
+
+    Vue.directive('highlightjs', {
+      deep: true,
+      bind: function (el, binding) {
+        let targets = el.querySelectorAll('pre code')
+        targets.forEach((target) => {
+          if (binding.value) {
+            target.textContent = binding.value
+          }
+          hljs.highlightBlock(target)
+        })
+      },
+      componentUpdated: function (el, binding) {
+        let targets = el.querySelectorAll('code')
+        targets.forEach((target) => {
+          if (binding.value) {
+            target.textContent = binding.value
+            hljs.highlightBlock(target)
+          }
+        })
+      }
+    })
+
+    Vue.directive('newtab', {
+      deep: true,
+      bind: function (el, binding) {
+        let targets = el.querySelectorAll('a')
+        targets.forEach((target) => {
+          target.target = '_blank'
+        })
+      },
+      componentUpdated: function (el, binding) {
+        let targets = el.querySelectorAll('a')
+        targets.forEach((target) => {
+          target.target = '_blank'
+        })
+      }
+    })
+
+    window.app = new Vue({
+      el: 'main',
+      data: {
+        gist: undefined
+      },
+      methods: {
+        async loadGist(id) {
+          const request = await fetchGist(id)
+
+          if (!request.ok) {
+            return alert("Couldn't load that gist.")
+          }
+
+          this.gist = await request.json()
+        },
+        marked
+      }
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.app.loadGist(getCurrentGistID())
+    });
+
+    window.addEventListener('hashchange', function () {
+      window.app.loadGist(getCurrentGistID())
+    });
+  </script>
+</body>
+
+</html>
