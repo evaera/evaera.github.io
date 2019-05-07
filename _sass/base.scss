@@ -1,4 +1,5 @@
-$break: 650px;
+$break: 765px;
+$break-xs: 500px;
 
 body {
     font-family: Roboto;
@@ -28,6 +29,10 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 5em;
+
+    @media screen and (max-width: $break) {
+        font-size: 4em;
+    }
 }
 
 h2 {
