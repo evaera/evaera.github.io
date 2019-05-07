@@ -114,17 +114,6 @@
     - text: idealize.co
   image: https://idealize.co/images/idealize-logo.png
   description: Idealize is an app that I made at work, and while I didn't make the design decisions behind it, I am the sole developer on the project. It's an uplifting phone app that provides three different ways for you to improve your well-being every day.
-- 
-  title: The Third Crusade
-  languages:
-    - 2018
-    - Roblox
-    - Lua
-  links:
-    - text: Roblox Game
-      href: https://www.roblox.com/games/1383356634/The-Third-Crusade-Alpha
-  image: https://i.eryn.io/3blkf22k14.png
-  description: The Third Crusade is a multiplayer faction-based Roblox game that takes place during 1191 A.D., featuring appropriate combat and visuals from the time period. The player travels back in time to walk through the footsteps of one of their ancestors who lived back then by accessing a futuristic machine created by an evil corporation.
 -
   title: RbxSync
   languages:
