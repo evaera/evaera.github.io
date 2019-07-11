@@ -35,7 +35,7 @@
     - text: GitHub
       href: https://github.com/evaera/RoVer
   image: https://rover.link/images/icon.png
-  description: RoVer is an open source, drop-in verification Discord bot that will allow your members to safely authenticate their Roblox account on your Discord server. RoVer currently has over 650,000 verified users, and totals in at over 65,000 Discord servers.
+  description: RoVer is an open source, drop-in verification Discord bot that will allow your members to safely authenticate their Roblox account on your Discord server. RoVer currently has over 1.5 million verified users, and over 100,000 bot invites.
 -
   title: "Aquaman: Home is Calling"
   languages:
@@ -57,6 +57,18 @@
     - text: www.scriptinghelpers.org
   image: https://scriptinghelpers.org/images/logos/logo_sm.png
   description: Roblox scripting Q&A community with over 25,000 members.
+-
+  title: Roblox FFlag Watcher
+  languages:
+    - 2013
+    - Web
+    - Node.js
+    - TypeScript
+  links:
+    - text: fflag.eryn.io
+      href: https://fflag.eryn.io/history
+  image: https://i.eryn.io/6cyqn6xqtu.png
+  description: Tracks history of Roblox Fast Flag changes. Fast Flags are what Roblox uses internally to enable or disable features in production servers and clients.
 -
   title: roblox-ts
   languages:
