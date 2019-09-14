@@ -84,7 +84,7 @@
       font-size: 1rem;
       text-transform: uppercase;
       font-size: 1.2rem;
-      z-index: 2;
+      z-index: 4;
       transform: rotate(-5deg) translateY(-16px);
       position: absolute;
       background: purple;
@@ -127,11 +127,12 @@
       &::before {
         content:'';
         width:100%;
-        height:50%;    
+        height:70%;    
         position:absolute;
         left:0;
         bottom:0;
         background:linear-gradient(transparent 150px, #cc4bea);
+        z-index: 3;
       }
 
       &:hover {
