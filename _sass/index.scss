@@ -132,7 +132,10 @@
         left:0;
         bottom:0;
         background:linear-gradient(transparent 150px, #cc4bea);
-        z-index: 3;
+
+        @media screen and (min-width: $break-xs) {
+          z-index: 3;
+        }
       }
 
       &:hover {
