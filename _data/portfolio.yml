@@ -1,8 +1,10 @@
 -
   headline:
-   title: Current Position
-   subtitle: Since 2016
-  title: Software Engineer @ ekiwi, LLC
+   title: Previously
+   subtitle: 2016-2019
+  title: Software Engineer
+  subtitle: ekiwi, LLC
+  category: Work
   languages:
     - Web
     - SQL
@@ -23,21 +25,8 @@
   description: Website development, database management, systems administration, creation and maintenance of internal frameworks, phone apps, web scraping in Java and Node.js
   image: https://www.screen-scraper.com/images/logo.svg
 -
-  title: RoVer
-  languages:
-    - 2017
-    - Web
-    - Node.js
-    - JavaScript
-  links:
-    - text: Project Page
-      href: https://rover.link
-    - text: GitHub
-      href: https://github.com/evaera/RoVer
-  image: https://rover.link/images/icon.png
-  description: RoVer is an open source, drop-in verification Discord bot that will allow your members to safely authenticate their Roblox account on your Discord server. RoVer currently has over 1.5 million verified users, and over 100,000 bot invites.
--
   title: "Aquaman: Home is Calling"
+  category: Games
   languages:
     - 2018
     - Roblox
@@ -46,9 +35,26 @@
     - text: Roblox Game
       href: https://www.roblox.com/games/2056459358/Aquaman-Home-is-Calling
   image: https://i.eryn.io/fq069ykjq1.png
+  solid: true
   description: "*Aquaman: Home is Calling* is a multiplayer MMORPG-esque underwater experience wherein the player becomes Aquaman to overcome trials to become the King of Atlantis. This game was sponsored by Warner Brothers and produced by Roblox in order to promote the then-upcoming Aquaman film. Working as part of a team for several months, we implemented custom solutions to problems like underwater pathfinding with navigation mesh generation, enemy AI, a polymorphic Unit system to model any combatant (be it a player or an AI-controlled NPC), and a state management system named Aurora."
 -
+  title: RoVer
+  category: Services
+  languages:
+    - 2017
+    - Web
+    - Node.js
+    - JavaScript
+  links:
+    - text: Website
+      href: https://rover.link
+    - text: GitHub
+      href: https://github.com/evaera/RoVer
+  image: https://rover.link/images/icon.png
+  description: RoVer is an open source, drop-in verification Discord bot that will allow your members to safely authenticate their Roblox account on your Discord server. RoVer currently has over 1.5 million verified users, and over 100,000 bot invites.
+-
   title: Scripting Helpers
+  category: Services
   languages:
     - 2013
     - Web
@@ -57,10 +63,22 @@
     - text: www.scriptinghelpers.org
   image: https://scriptinghelpers.org/images/logos/logo_sm.png
   description: Roblox scripting Q&A community with over 25,000 members.
+- 
+  title: Aurora
+  category: Libraries
+  languages:
+    - 2018
+    - Lua
+  links:
+    - text: GitHub
+      href: https://github.com/evaera/Aurora
+  image: https://i.eryn.io/kx72qrb9lh.png
+  description: Aurora is a library that can manage status effects (known as "Auras") in your Roblox game. These Auras are much akin to "buffs" and "debuffs" as seen in many games. Using Aurora can help you stay sane while managing complex game state when multiple parts of your game need to keep track of or change the same resource. *It's like Redux, but for games!*
 -
   title: Roblox FFlag Watcher
+  category: Tools
   languages:
-    - 2013
+    - 2018
     - Web
     - Node.js
     - TypeScript
@@ -70,7 +88,20 @@
   image: https://i.eryn.io/6cyqn6xqtu.png
   description: Tracks history of Roblox Fast Flag changes. Fast Flags are what Roblox uses internally to enable or disable features in production servers and clients.
 -
+  title: Roblox Animation Transfer
+  category: Tools
+  languages:
+    - 2013
+    - Node.js
+    - TypeScript
+  links:
+    - text: GitHub
+      href: https://github.com/evaera/roblox-animation-transfer
+  image: https://i.eryn.io/6cyqn6xqtu.png
+  description: Command line tool that transfers Roblox animations from one owner to another.
+-
   title: roblox-ts
+  category: Tools
   languages:
     - 2018
     - Web
@@ -78,34 +109,92 @@
     - TypeScript
     - Lua
   links:
-    - text: Project Page
+    - text: Website
       href: https://roblox-ts.github.io/
     - text: GitHub
       href: https://github.com/roblox-ts/roblox-ts
   image: https://roblox-ts.github.io/images/roblox-ts-128.png
+  solid: true
   description: roblox-ts is a TypeScript-to-Lua transpiler made for [Roblox](https://www.roblox.com), co-authored with [Osyris](https://github.com/Osyrisrblx). It was made out of necessity for type safety when making games on Roblox. It features has auto-generated type declarations from the Roblox API dump, NPM support, and robust design.
 - 
-  title: Aurora
-  languages:
-    - 2018
-    - Lua
-  links:
-    - text: GitHub
-      href: https://github.com/evaera/Aurora
-  image: https://i.eryn.io/kx72qrb9lh.png
-  description: Aurora is a library that can manage status effects (known as "Auras") in your Roblox game. These Auras are much akin to "buffs" and "debuffs" as seen in many games. Using Aurora can help you stay sane while managing complex game state when multiple parts of your game need to keep track of or change the same resource. *It's like Redux, but for games!*
-- 
   title: Cmdr
+  category: Libraries
   languages:
     - 2018
     - Lua
   links:
+    - text: Website
+      href: https://eryn.io/Cmdr/
     - text: GitHub
       href: https://github.com/evaera/Cmdr
   image: https://i.eryn.io/eglek69k53.png
   description: Cmdr is a fully extensible and type safe command console for Roblox developers. Cmdr is designed specifically so that you can write your own commands and argument types, so that it can fit right in with the rest of your game. In addition to the standard moderation commands (teleport, kill, kick, ban), Cmdr is also great for debug commands in your game (say, if you wanted to have a command to give you a weapon, reset a round, teleport you between places in your universe).
 - 
+  title: Rocs
+  category: Libraries
+  languages:
+    - 2019
+    - Lua
+  links:
+    - text: Website
+      href: https://freshlysqueezednerds.github.io/Rocs/#rocs
+    - text: GitHub
+      href: https://github.com/FreshlySqueezedNerds/Rocs
+  image: https://user-images.githubusercontent.com/2489210/62466698-f44d6600-b75f-11e9-80f1-19fbec20e89c.png
+  description: Rocs is a progressive entity-component-system (ECS) library developed for use in the Roblox game engine. Rocs also performs the role of a general game state management library. Specifically, Rocs facilitates managing resources from multiple, unrelated places in your code base in a generic way.
+- 
+  title: Roblox Lua Promise
+  category: Libraries
+  languages:
+    - 2019
+    - Lua
+  links:
+    - text: Website
+      href: https://eryn.io/roblox-lua-promise/
+    - text: GitHub
+      href: https://github.com/evaera/roblox-lua-promise
+  image: https://i.eryn.io/od6dxn7shk.png
+  solid: true
+  description: An implementation of Promise/A+ for Roblox. A Promise is an object that represents a value that will exist in the future, but doesn't right now.
+- 
+  title: Bubbles
+  category: Libraries
+  languages:
+    - 2018
+    - Lua
+  links:
+    - text: GitHub
+      href: https://github.com/evaera/Bubbles
+  image: https://i.eryn.io/od6dxn7shk.png
+  solid: true
+  description: Bubbles are mixin-style objects presented as an alternative to classical-style inheritance for Lua.
+- 
+  title: Roblox Lua Algorithms
+  category: Libraries
+  languages:
+    - 2018
+    - Lua
+  links:
+    - text: GitHub
+      href: https://github.com/evaera/RobloxLuaAlgorithms
+  image: https://i.eryn.io/od6dxn7shk.png
+  solid: true
+  description: A repository of generic algorithms intended to be used within the Roblox game engine
+- 
+  title: Roblox Image Size
+  category: Tools
+  languages:
+    - 2018
+    - Lua
+  links:
+    - text: GitHub
+      href: https://github.com/evaera/roblox-image-size
+  image: https://i.eryn.io/od6dxn7shk.png
+  solid: true
+  description: A Roblox plugin that gives you the pixels size of a Roblox image asset
+- 
   title: Votum
+  category: Services
   languages:
     - 2018
     - TypeScript
@@ -115,19 +204,8 @@
   image: https://i.eryn.io/qm2bshqkqr.png
   description: Votum is a Discord bot for managing small party voting systems such as a council or small group who want to deliberate on matters democratically. It allows council members to create "motions", which can then be voted upon and passed by the other councilors.
 -
-  title: Idealize
-  languages:
-    - 2018
-    - Web
-    - JavaScript
-    - TypeScript
-    - React Native
-  links:
-    - text: idealize.co
-  image: https://idealize.co/images/idealize-logo.png
-  description: Idealize is an app that I made at work, and while I didn't make the design decisions behind it, I am the sole developer on the project. It's an uplifting phone app that provides three different ways for you to improve your well-being every day.
--
   title: RbxSync
+  category: Graveyard
   languages:
     - 2016
     - Node.js
@@ -140,33 +218,36 @@
   description: RbxSync was an open source Roblox plugin that easily integrated any third-party code editor or IDE, such as Sublime Text, Notepad++, VS Code, or Atom, into ROBLOX Studio. I have since dropped support for it in favor of Rojo and a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo) I made for it.
 - 
   title: Poll Dancer
+  category: Services
   languages:
     - 2017
     - JavaScript
   links:
-    - text: Project Page
+    - text: Website
       href: https://eryn.io/PollDancer
     - text: GitHub
       href: https://github.com/evaera/PollDancer
   image: https://i.eryn.io/hv2rcewaye.png
   description: Poll Dancer is a simple Discord bot that allows you to create beautifully simple quick reaction-based polls for your community.
-- 
-  title: Various Roblox Tech Demos
-  languages:
-    - 2018
-    - Roblox
-    - Lua
-  links:
-    - text: McCree's Ultimate
-      href: https://www.roblox.com/games/418888822/its-high-noon
-    - text: Sword & Shield Combat
-      href: https://www.roblox.com/games/1011040357/Sword-Shield-tech-demo
-    - text: Mass Effect Kodiak Shuttle
-      href: https://www.roblox.com/games/752976300/Shuttle
-  image: https://eryn.io/images/icons/roblox.png
-  description: I've been programming in Lua on Roblox since 2009, and use it as my hobby game development platform. It's what got me started with programming!
+# - 
+#   title: Various Roblox Tech Demos
+#   category: Games
+#   languages:
+#     - 2018
+#     - Roblox
+#     - Lua
+#   links:
+#     - text: McCree's Ultimate
+#       href: https://www.roblox.com/games/418888822/its-high-noon
+#     - text: Sword & Shield Combat
+#       href: https://www.roblox.com/games/1011040357/Sword-Shield-tech-demo
+#     - text: Mass Effect Kodiak Shuttle
+#       href: https://www.roblox.com/games/752976300/Shuttle
+#   image: https://eryn.io/images/icons/roblox.png
+#   description: I've been programming in Lua on Roblox since 2009, and use it as my hobby game development platform. It's what got me started with programming!
 -
   title: Radial Sprite Sheet Generator
+  category: Tools
   languages:
     - 2018
     - TypeScript
@@ -178,9 +259,11 @@
     - text: GitHub
       href: https://github.com/evaera/RadialSpriteSheetGenerator
   image: https://i.eryn.io/663f3ctf12.png
+  solid: true
   description: RadialSpriteSheetGenerator is a project that generates radial sprite sheets (what a surprise!). It is another project born out of necessity, because Roblox doesn't support clipping masks for images. It can generate a stereotypical "loading ring" or "circular progress indicator" out of any image you choose, paired with a Lua module that lets you pass in a percentage and it will autonatically pick the closest image from the sprite sheet.
 - 
   title: EvLightning
+  category: Libraries
   languages:
     - 2016
     - Lua
@@ -188,4 +271,5 @@
     - text: GitHub
       href: https://github.com/evaera/EvLightning
   image: https://i.eryn.io/od6dxn7shk.png
+  solid: true
   description: EvLightning is a Roblox Lua library that aims to generate realistic-looking lightning bolts out of Parts. This could be used to easily add lightning strike effects to your game.

@@ -2,44 +2,59 @@
 layout: fullscreen
 title: eryn L. K.
 ---
-<section class="welcome full-width">
-	<div class="center-wrapper">
-		<div class="center">
-			<h1>eryn L. K.</h1>
-			<h2>Programmer &bull; Designer</h2>
-		</div>
+<div class="home">
+	<header>
+		<h1 class="eryn"><span class="e rainbow-text">e</span><span class="ryn">ryn<small> L. K.</small></span></h1>
+		<h1 class="spacer">eryn</h1>
+	</header>
+	<div class="contact">
+		<a target="_blank" href="https://discord.gg/7yfwrat"><img src="https://i.eryn.io/du46dc53pv.png" style="filter: hue-rotate(45deg);" alt="Discord"  /><span>Join Server</span></a>
+		<a target="_blank" href="https://github.com/evaera"><img src="/images/icons/github.png" alt="GitHub" /><span>evaera</span></a>
+		<a target="_blank" href="https://www.roblox.com/users/92658764/profile"><img src="/images/icons/roblox.png" alt="ROBLOX" /><span>evaera</span></a>
+		<a target="_blank" href="https://twitter.com/evaeraevaera"><img src="/images/icons/twitter.png" alt="Twitter" /><span>evaeraevaera</span></a>
+		<a target="_blank" href="https://discordapp.com/users/113691352327389188/"><img src="/images/icons/discord.png" alt="Discord" /><span>eryn#0001</span></a>
+		<a target="_blank" href="mailto:e@eryn.io"><img src="/images/icons/email.png" alt="Email" /><span>e@eryn.io</span></a>
+		<a target="_blank" href="https://patreon.com/erynlynn"><img src="/images/icons/patreon.png" alt="Patreon" /><span>Patreon</span></a>
 	</div>
-	<div class="center contact">
-		<a class="flip-over" target="_blank" href="https://github.com/evaera"><img src="/images/icons/github.png" alt="GitHub" /><span>evaera</span></a>
-		<a class="flip-over" target="_blank" href="https://www.roblox.com/users/92658764/profile"><img src="/images/icons/roblox.png" alt="ROBLOX" /><span>evaera</span></a>
-		<a class="flip-over" target="_blank" href="https://twitter.com/evaeraevaera"><img src="/images/icons/twitter.png" alt="Twitter" /><span>too long</span></a>
-		<a class="flip-over" target="_blank" href="https://discordapp.com/users/113691352327389188/"><img src="/images/icons/discord.png" alt="Discord" /><span>eryn#0001</span></a>
-		<a class="flip-over" target="_blank" href="mailto:e@eryn.io"><img src="/images/icons/email.png" alt="Email" /><span>e@eryn.io</span></a>
-		<a class="flip-over" target="_blank" href="https://patreon.com/erynlynn"><img src="/images/icons/patreon.png" alt="Patreon" /><span>Patreon</span></a>
-	</div>
-	<div class="center discord">
-		<a href="https://discord.gg/7yfwrat"><img src="/images/icons/discord.png" alt="Discord"> Join my Discord community</a>
-	</div>
-	<div class="down">
-		<span>See my projects</span><img src="/images/icons/down.png" alt="Down" />
-	</div>
-</section>
-<section class="content">
-	{% for project in site.data.portfolio %}
-	<div class="project">
-		<div class="divider darker"></div>
-		<img src="{{ project.image }}" alt="{{ project.title }}">
-		{% if project.headline %}
-		<h3>{{ project.headline.title }} <small>{{ project.headline.subtitle }}</small></h3>
-		{% endif %}
-		<h2>{{ project.title }} <small>{{ project.languages | join: ", " }}</small></h2>
-		<h4>
-		{% for link in project.links %}
-			<a target="_blank" href="{% if link.href %}{{ link.href }}{% else %}http://{{ link.text}}{% endif %}">{{ link.text }}</a>{% unless forloop.last %}, {% endunless %}
+	<main>
+		{% assign categories = site.data.portfolio | group_by: 'category' %}
+		{% for category in categories %}
+			{% for project in category.items %}
+			<div class="project">
+				{% if category.name != lastName %}
+				<h1 class="category">{{ category.name }}</h1>
+				{% assign lastName = category.name %}
+				{% endif %}
+				<div>
+					<img src="{{ project.image }}" alt="{{ project.title }}"{% if project.solid %} class="no-silhouette"{% endif %}>
+					{% if project.headline %}
+					<h3>{{ project.headline.title }} <small>{{ project.headline.subtitle }}</small></h3>
+					{% endif %}
+					<h2> {{ project.title }}</h2>
+					{% if project.subtitle %}
+					<h3 class="subtitle">{{ project.subtitle }}</h3>
+					{% endif %}
+					<small>{{ project.languages | join: ", " }}</small>
+					<h4>
+					{% for link in project.links %}
+						<a target="_blank" href="{% if link.href %}{{ link.href }}{% else %}http://{{ link.text}}{% endif %}">{{ link.text }}</a>{% unless forloop.last %}, {% endunless %}
+					{% endfor %}
+					</h4>
+					<p>{{ project.description | markdownify }}</p>
+				</div>
+			</div>
+			{% endfor %}
+
 		{% endfor %}
-		</h4>
-		<p>{{ project.description | markdownify }}</p>
-	</div>
-	{% endfor %}
-</section>
-<div class="rainbow"></div>
+	</main>
+</div>
+<script>
+	var el = document.querySelector('header .eryn')
+	document.addEventListener('scroll', e => {
+		if (window.scrollY > 0) {
+			el.classList.add('scrolled')
+		} else {
+			el.classList.remove('scrolled')
+		}
+	})
+</script>
