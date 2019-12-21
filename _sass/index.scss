@@ -141,6 +141,7 @@
         background:linear-gradient(transparent 150px, #cc4bea);
 
         transition: all 0.3s ease;
+        pointer-events: none;
 
         @media screen and (min-width: $break-xs) {
           z-index: 3;
