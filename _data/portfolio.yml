@@ -54,7 +54,7 @@
   links:
     - text: Roblox Game
       href: https://www.roblox.com/games/2056459358/Aquaman-Home-is-Calling
-  image: https://i.eryn.io/fq069ykjq1.png
+  image: https://eryn.io/images/rolantis.png
   solid: true
   description: "*Aquaman: Home is Calling* is a multiplayer MMORPG-esque underwater experience wherein the player becomes Aquaman to overcome trials to become the King of Atlantis. This game was sponsored by Warner Brothers and produced by Roblox in order to promote the then-upcoming Aquaman film. Working as part of a team for several months, we implemented custom solutions to problems like underwater pathfinding with navigation mesh generation, enemy AI, a polymorphic Unit system to model any combatant (be it a player or an AI-controlled NPC), and a state management system named Aurora."
 -
@@ -92,7 +92,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/Aurora
-  image: https://i.eryn.io/kx72qrb9lh.png
+  image: https://eryn.io/images/aurora.png
   description: Aurora is a library that can manage status effects (known as "Auras") in your Roblox game. These Auras are much akin to "buffs" and "debuffs" as seen in many games. Using Aurora can help you stay sane while managing complex game state when multiple parts of your game need to keep track of or change the same resource. *It's like Redux, but for games!*
 -
   title: Roblox FFlag Watcher
@@ -105,7 +105,7 @@
   links:
     - text: fflag.eryn.io
       href: https://fflag.eryn.io/history
-  image: https://i.eryn.io/6cyqn6xqtu.png
+  image: https://eryn.io/images/ts.png
   description: Tracks history of Roblox Fast Flag changes. Fast Flags are what Roblox uses internally to enable or disable features in production servers and clients.
 -
   title: Roblox Animation Transfer
@@ -147,7 +147,7 @@
       href: https://eryn.io/Cmdr/
     - text: GitHub
       href: https://github.com/evaera/Cmdr
-  image: https://i.eryn.io/eglek69k53.png
+  image: https://eryn.io/images/cmdr.png
   description: Cmdr is a fully extensible and type safe command console for Roblox developers. Cmdr is designed specifically so that you can write your own commands and argument types, so that it can fit right in with the rest of your game. In addition to the standard moderation commands (teleport, kill, kick, ban), Cmdr is also great for debug commands in your game (say, if you wanted to have a command to give you a weapon, reset a round, teleport you between places in your universe).
 - 
   title: Rocs
@@ -173,7 +173,7 @@
       href: https://eryn.io/roblox-lua-promise/
     - text: GitHub
       href: https://github.com/evaera/roblox-lua-promise
-  image: https://i.eryn.io/od6dxn7shk.png
+  image: https://eryn.io/images/lua.png
   solid: true
   description: An implementation of Promise/A+ for Roblox. A Promise is an object that represents a value that will exist in the future, but doesn't right now.
 - 
@@ -185,7 +185,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/Bubbles
-  image: https://i.eryn.io/od6dxn7shk.png
+  image: https://eryn.io/images/lua.png
   solid: true
   description: Bubbles are mixin-style objects presented as an alternative to classical-style inheritance for Lua.
 - 
@@ -197,7 +197,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/RobloxLuaAlgorithms
-  image: https://i.eryn.io/od6dxn7shk.png
+  image: https://eryn.io/images/lua.png
   solid: true
   description: A repository of generic algorithms intended to be used within the Roblox game engine
 - 
@@ -209,7 +209,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/roblox-image-size
-  image: https://i.eryn.io/od6dxn7shk.png
+  image: https://eryn.io/images/lua.png
   solid: true
   description: A Roblox plugin that gives you the pixels size of a Roblox image asset
 - 
@@ -221,7 +221,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/Votum
-  image: https://i.eryn.io/qm2bshqkqr.png
+  image: https://eryn.io/images/votum.png
   description: Votum is a Discord bot for managing small party voting systems such as a council or small group who want to deliberate on matters democratically. It allows council members to create "motions", which can then be voted upon and passed by the other councilors.
 -
   title: RbxSync
@@ -234,7 +234,7 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/RbxSync
-  image: https://i.eryn.io/6cyqn6xqtu.png
+  image: https://eryn.io/images/js.png
   description: RbxSync was an open source Roblox plugin that easily integrated any third-party code editor or IDE, such as Sublime Text, Notepad++, VS Code, or Atom, into ROBLOX Studio. I have since dropped support for it in favor of Rojo and a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo) I made for it.
 - 
   title: Poll Dancer
@@ -247,7 +247,7 @@
       href: https://eryn.io/PollDancer
     - text: GitHub
       href: https://github.com/evaera/PollDancer
-  image: https://i.eryn.io/hv2rcewaye.png
+  image: https://eryn.io/images/polldancer.png
   description: Poll Dancer is a simple Discord bot that allows you to create beautifully simple quick reaction-based polls for your community.
 # - 
 #   title: Various Roblox Tech Demos
@@ -278,7 +278,7 @@
       href: https://eryn.io/RadialSpriteSheetGenerator/
     - text: GitHub
       href: https://github.com/evaera/RadialSpriteSheetGenerator
-  image: https://i.eryn.io/663f3ctf12.png
+  image: https://eryn.io/images/ts.png
   solid: true
   description: RadialSpriteSheetGenerator is a project that generates radial sprite sheets (what a surprise!). It is another project born out of necessity, because Roblox doesn't support clipping masks for images. It can generate a stereotypical "loading ring" or "circular progress indicator" out of any image you choose, paired with a Lua module that lets you pass in a percentage and it will autonatically pick the closest image from the sprite sheet.
 - 
@@ -290,6 +290,6 @@
   links:
     - text: GitHub
       href: https://github.com/evaera/EvLightning
-  image: https://i.eryn.io/od6dxn7shk.png
+  image: https://eryn.io/images/lua.png
   solid: true
   description: EvLightning is a Roblox Lua library that aims to generate realistic-looking lightning bolts out of Parts. This could be used to easily add lightning strike effects to your game.
