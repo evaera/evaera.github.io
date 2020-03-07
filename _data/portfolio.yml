@@ -105,19 +105,20 @@
   links:
     - text: fflag.eryn.io
       href: https://fflag.eryn.io/history
-  image: https://eryn.io/images/ts.png
+  image: https://eryn.io/images/js.png
   description: Tracks history of Roblox Fast Flag changes. Fast Flags are what Roblox uses internally to enable or disable features in production servers and clients.
 -
   title: Roblox Animation Transfer
   category: Tools
   languages:
-    - 2013
+    - 2018
     - Node.js
     - TypeScript
   links:
     - text: GitHub
       href: https://github.com/evaera/roblox-animation-transfer
-  image: https://i.eryn.io/6cyqn6xqtu.png
+  image: https://eryn.io/images/ts.png
+  solid: true
   description: Command line tool that transfers Roblox animations from one owner to another.
 -
   title: roblox-ts
